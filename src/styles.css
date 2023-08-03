@@ -2,11 +2,19 @@
 * CSS file to hold styles that apply across the application
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap"); */
+
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+
+* {
+  /* outline: 1px solid silver; */
+  font-family: 'Satoshi', sans-serif;
+}
 
 html,
 body {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   height: 100%;
   margin: 0;
   overflow-x: hidden;
@@ -20,20 +28,34 @@ div#main {
   width: 100vw;
 }
 
-section {
+/* section {
   position: relative;
   width: 100vw;
-}
+} */
 
 section.min-height {
+  /* min-height: 100vh; */
+}
+.aboutSection{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/motion-background.jpg");
   min-height: 100vh;
 }
-
-section.padding {
-  padding: 5rem 0;
+.about {
+    background-color: "white";
+    width: "100%";
+    padding: "4rem";
+    margin: "3rem auto";
+    text-align: "center";
 }
 
-section img.background {
+.des {
+  text-align: justify;
+}
+/* section.padding {
+  padding: 5rem 0;
+} */
+
+/* section img.background {
   height: 100%;
   left: 50%;
   object-fit: cover;
@@ -43,14 +65,14 @@ section img.background {
   transform: translate(-50%, 0);
   width: 100vmax;
   z-index: -1;
-}
+} */
 
-h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 7rem;
-  font-weight: 400;
-  line-height: 0.8;
+.hero {
   margin: 0;
+  font-weight: 400;
+  line-height: 0.9;
+  font-size: 100px;
+  width: 17rem;
 }
 
 h2 {
@@ -122,4 +144,35 @@ a:hover {
 img.socialIcon {
   height: 30px;
   width: 30px;
+}
+
+.background {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/design-desk.jpeg");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+
+
+@media (max-width: 678px) {
+  .hero {
+    margin: 0;
+    font-weight: 400;
+    line-height: 0.9;
+    font-size: 70px;
+    /* width: 17rem; */
+  }
+
+  h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  section.padding {
+    /* padding: 5rem 0; */
+    /* width: 90%; */
+  }
 }
