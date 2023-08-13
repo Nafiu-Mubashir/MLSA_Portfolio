@@ -19,9 +19,9 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
+// import image from "../images/design-desk.jpeg";
 
-const imageAltText = "desktop with books and laptop";
+// const imageAltText = "desktop with books and laptop";
 
 /**
  * Project list
@@ -31,25 +31,25 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    image: "Web Apps 🎉",
     description:
       "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
     url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
   },
   {
-    title: "Web Development for Beginners",
+    image: "Web Development",
     description:
       "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
     url: "https://github.com/microsoft/web-dev-for-beginners",
   },
   {
-    title: "My Resume Site",
+    image: "My Resume Site",
     description:
       "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
     url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    image: "GitHub Codespaces",
     description:
       "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
     url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
@@ -58,23 +58,29 @@ const projectList = [
 
 const Portfolio = () => {
   return (
-    <section className="padding" id="portfolio">
-      <h2 style={{ textAlign: "center" }}>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
-        <div style={{ maxWidth: "40%", alignSelf: "center" }}>
-          <img
-            src={image}
-            style={{ height: "90%", width: "100%", objectFit: "cover" }}
-            alt={imageAltText}
-          />
-        </div>
-        <div className="container">
-          {projectList.map((project) => (
-            <div className="box" key={project.title}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
-              </a>
-              <p className="small">{project.description}</p>
+    <section className="padding h-screen" id="portfolio">
+      <h2 className="text-center font-bold text-[20px]">Portfolio</h2>
+      <div className="w-[90%] lg:w-[80%] m-auto p-3">
+        <div className="flex flex-col lg:flex-row justify-between gap-3 ">
+          {projectList.map(({ image, url, description }) => (
+            <div className="w-full lg:w-[25%] h-[50vh] bg-white shadow-lg p-1" key={image}>
+              <img
+                src="https://w0.peakpx.com/wallpaper/936/853/HD-wallpaper-anonymous-human-hood-dark-black.jpg"
+                className="h-[50%] w-[100%]"
+                alt=""
+              />
+              <div className="p-2">
+                <h4 className="font-bold">{image}</h4>
+                <p className="text-[13px] mb-3">{description}</p>
+                <a
+                  href={url}
+                  className="h-[20px] border p-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
             </div>
           ))}
         </div>
