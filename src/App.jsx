@@ -34,7 +34,7 @@ const siteProps = {
   linkedIn: "www.linkedin.com/in/nafiu-mubashir-adedayo",
   medium: "",
   twitter: "microsoft",
-  // youTube: "Code",
+  youTube: "Code",
 };
 
 const primaryColor = "#4E567E";
