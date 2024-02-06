@@ -24,17 +24,15 @@ import "./styles.css";
  * If you don't have one of the social sites listed, leave it as an empty string.
  */
 const siteProps = {
-  intro: "Hello, I'm",
   name: "Nafiu Mubashir",
-  title: "Full-Satck Web Developer",
-  desc: "I am a dynamic MERN stack developer with a passion for transforming innovative ideas into reality. Proficient in MongoDB, Express, React, and Node.js, I thrive on crafting responsive and interactive web applications that seamlessly blend functionality with aesthetics. With a keen eye for detail and a dedication to delivering top-notch user experiences, I am committed to turning complex challenges into elegant solutions. Let's collaborate to bring your digital vision to life!",
+  title: "Frontend Web Developer",
   email: "mubashirnafiu@gmail.com",
   gitHub: "https://github.com/Nafiu-Mubashir",
-  instagram: "microsoft",
+  instagram: "ibn_nafiu",
   linkedIn: "www.linkedin.com/in/nafiu-mubashir-adedayo",
   medium: "",
-  twitter: "microsoft",
-  youTube: "Code",
+  twitter: "@AdedayoMubashir",
+  youTube: "",
 };
 
 const primaryColor = "#4E567E";
@@ -47,8 +45,6 @@ const App = () => {
       <Home
         name={siteProps.name}
         title={siteProps.title}
-        intro={siteProps.intro}
-        desc={siteProps.desc}
       />
       <About />
       <Portfolio />

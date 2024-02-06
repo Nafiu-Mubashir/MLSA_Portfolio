@@ -15,8 +15,9 @@ import envelopeIcon from "../images/socials/envelope.svg";
 import gitHubIcon from "../images/socials/github.svg";
 import instagramIcon from "../images/socials/instagram.svg";
 import linkedInIcon from "../images/socials/linkedin.svg";
+import mediumIcon from "../images/socials/medium.svg";
 import twitterIcon from "../images/socials/twitter.svg";
-// import youTubeIcon from "../images/socials/youtube.svg";
+import youTubeIcon from "../images/socials/youtube.svg";
 
 /**
  * 💡 Learning resources
@@ -32,16 +33,33 @@ const Footer = (props) => {
     gitHub,
     instagram,
     linkedIn,
-    // medium,
+    medium,
     name,
-    // primaryColor,
+    primaryColor,
     twitter,
-    // youTube,
+    youTube,
   } = props;
 
   return (
-    <div id="footer" className="bg-blue-900 h-[30vh] text-center">
-      <div className="flex justify-center items-center gap-2 mt-[70px]">
+    <div
+      id="footer"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "2.5rem",
+        padding: "5rem 0 3rem",
+        backgroundColor: primaryColor,
+        width: "100vw",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "2.5rem",
+        }}
+      >
         {email && (
           <a href={`mailto:${email}`}>
             <img src={envelopeIcon} alt="email" className="socialIcon" />
@@ -75,9 +93,23 @@ const Footer = (props) => {
             <img src={linkedInIcon} alt="LinkedIn" className="socialIcon" />
           </a>
         )}
+        {medium && (
+          <a href={`https://medium.com/@${medium}`} target="_blank" rel="noopener noreferrer">
+            <img src={mediumIcon} alt="Medium" className="socialIcon" />
+          </a>
+        )}
         {twitter && (
           <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
             <img src={twitterIcon} alt="Twitter" className="socialIcon" />
+          </a>
+        )}
+        {youTube && (
+          <a
+            href={`https://www.youtube.com/c/${youTube}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={youTubeIcon} alt="YouTube" className="socialIcon" />
           </a>
         )}
       </div>
@@ -89,7 +121,7 @@ const Footer = (props) => {
 };
 
 Footer.defaultProps = {
-  name: "",
+  name: "Rahmlad",
 };
 
 Footer.propTypes = {
@@ -98,9 +130,11 @@ Footer.propTypes = {
   gitHub: PropTypes.string,
   instagram: PropTypes.string,
   linkedIn: PropTypes.string,
+  medium: PropTypes.string,
   name: PropTypes.string.isRequired,
   primaryColor: PropTypes.string,
   twitter: PropTypes.string,
+  youTube: PropTypes.string,
 };
 
 export default Footer;
