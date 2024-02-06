@@ -28,9 +28,13 @@ const Home = ({ name, title }) => {
   return (
     <section id="home" className="min-height">
       <img className="background" src={image} alt="" />
-      <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "17rem" }}>
-        <h1>{name}</h1>
-        <h2>{title}</h2>
+      <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "30rem", }}>
+        <h1 style={{
+          fontSize: "50px", fontWeight: "bold"
+        }}>{name}</h1>
+        <h2 style={{
+          fontSize: "50px", fontWeight: "bold"
+        }}>{title}</h2>
       </div>
       <div
         style={{
@@ -40,7 +44,7 @@ const Home = ({ name, title }) => {
           animation: "1s ease-out 0s 1 bounce",
         }}
       >
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+        <img src={arrowSvg} style={{ height: "3rem", width: "3rem", }} alt={imageAltText} />
       </div>
     </section>
   );
